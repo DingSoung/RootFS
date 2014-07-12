@@ -1,0 +1,19 @@
+#! /bin/sh
+
+#mount all in fstab
+/bin/mount -a
+
+
+
+#Mount Project,if put in fstab it will take a long time
+#echo "Mount Project" 
+mount -o nolock,rsize=1024,wsize=1024,timeo=10.18.52.22:/home/dsw248/Project   /mnt
+
+
+#QT
+#./bin/qtopia4
+
+echo "ASG Running..." 
+#Start ASG.x
+cd /home
+./ASG.x

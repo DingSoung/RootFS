@@ -1,0 +1,22 @@
+1 NFS FileSystem
+
+setenv bootargs root=/dev/nfs rootfstype=nfs nfsroot=10.18.52.22:/home/dsw248/RootFS_Qt ip=10.18.52.23:10.18.52.22:10.18.52.254:255.255.255.0 rw console=ttySAC0,115200
+
+setenv ipaddr 10.18.52.23
+setenv serverip 10.18.52.22
+setenv gatewayip 10.18.52.254
+
+OR
+setenv bootargs "root=/dev/nfs nfsroot=192.168.0.231:/forlinx/root/FileSystem-Yaffs2 ip=192.168.0.232:192.168.0.231:192.168.0.201:255.255.255.0:witech.com.cn:eth0:off console=ttySAC0,115200"
+
+
+
+2 NandFlash FileSystem 
+
+yaffs
+setenv bootargs "root=/dev/mtdblock3 rootfstype=yaffs2 console=ttySAC0,115200"
+
+
+cramfs
+setenv bootargs "root=/dev/mtdblock2 rootfstype=cramfs console=ttySAC0,115200"
+setenv bootargs root=/dev/mtdblock2 rootfstype=cramfs console=ttySAC0,115200
